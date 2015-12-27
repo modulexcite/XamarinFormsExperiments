@@ -1,20 +1,21 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace XamarinFormsExperiments
 {
-    public class CountryDetailPage : ContentPage
+    public class CountryDetailPage : PageBase
     {
-        public CountryDetailPage(string land)
+        public CountryDetailPage()
         {
-            Title = land;
+            this.SetBinding<CountryDetailViewModel>(Page.TitleProperty, x => x.Country);
+
+            var label = new Label();
+            label.SetBinding<CountryDetailViewModel>(Label.TextProperty, x => x.Country);
 
             Content = new StackLayout
             { 
                 Children =
                 {
-                    new Label { Text = land }
+                    label
                 }
             };
         }

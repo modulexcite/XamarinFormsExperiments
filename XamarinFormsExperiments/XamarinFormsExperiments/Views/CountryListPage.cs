@@ -1,10 +1,8 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace XamarinFormsExperiments
 {
-    public class CountryListPage : ContentPage
+    public class CountryListPage : PageBase
     {
         public CountryListPage()
         {
@@ -19,10 +17,13 @@ namespace XamarinFormsExperiments
                 "Schweiz"
             };
 
-            countryList.ItemSelected += async (object sender, SelectedItemChangedEventArgs e) => 
+            countryList.ItemSelected += async (sender, e) => 
             {
-                var detailPage = new CountryDetailPage(e.SelectedItem.ToString());
-                await Navigation.PushAsync(detailPage);
+                var viewModel = (CountryListViewModel)BindingContext;
+                await viewModel.OpenCountry(e.SelectedItem.ToString());
+
+//                var detailPage = new CountryDetailPage(e.SelectedItem.ToString());
+//                await Navigation.PushAsync(detailPage);
             };
 
             Content = new StackLayout
