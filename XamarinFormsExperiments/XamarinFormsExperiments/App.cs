@@ -10,6 +10,7 @@ namespace XamarinFormsExperiments
         {
             var list = new CountryListPage();
             var viewModel = new CountryListViewModel(list.Navigation);
+            viewModel.InitializeAsync(null).Wait();
             list.SetViewModel(viewModel);
 
             MainPage = new NavigationPage(list);

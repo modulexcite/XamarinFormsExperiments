@@ -6,7 +6,6 @@ namespace XamarinFormsExperiments
     public class CountryDetailViewModel : ViewModelBase
     {
         private string _country;
-
         public string Country 
         { 
             get { return _country; }

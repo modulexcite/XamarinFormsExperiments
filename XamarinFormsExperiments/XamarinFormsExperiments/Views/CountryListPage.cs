@@ -9,21 +9,12 @@ namespace XamarinFormsExperiments
             Title = "Länder";
 
             var countryList = new ListView();
-
-            countryList.ItemsSource = new []
-            {
-                "Deutschland",
-                "Österreich",
-                "Schweiz"
-            };
+            countryList.SetBinding<CountryListViewModel>(ListView.ItemsSourceProperty, x => x.Countries);
 
             countryList.ItemSelected += async (sender, e) => 
             {
                 var viewModel = (CountryListViewModel)BindingContext;
                 await viewModel.OpenCountry(e.SelectedItem.ToString());
-
-//                var detailPage = new CountryDetailPage(e.SelectedItem.ToString());
-//                await Navigation.PushAsync(detailPage);
             };
 
             Content = new StackLayout
