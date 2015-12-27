@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace XamarinFormsExperiments
 {
-    public class ViewModelBase : IViewModel, INotifyPropertyChanged
+    public class ViewModelBase : IViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -19,9 +19,9 @@ namespace XamarinFormsExperiments
             _navigation = navigation;
         }
 
-        public virtual Task InitializeAsync(object parameter)
+        public virtual void Initialize(object parameter)
         {
-            return Task.FromResult(0);
+            // Hook
         }
 
         protected void NotifyPropertyChanged([CallerMemberName]string propertyName = null)
@@ -43,7 +43,7 @@ namespace XamarinFormsExperiments
             var page = Activator.CreateInstance(pageType) as Page;
 
             var viewModel = Activator.CreateInstance(viewModelType, page.Navigation) as IViewModel;
-            await viewModel.InitializeAsync(parameter);
+            viewModel.Initialize(parameter);
 
             ((IView)page).SetViewModel(viewModel);
 

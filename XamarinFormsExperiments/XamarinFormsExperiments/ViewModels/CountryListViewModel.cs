@@ -16,7 +16,7 @@ namespace XamarinFormsExperiments
         {
         }
 
-        public override Task InitializeAsync(object parameter)
+        public override void Initialize(object parameter)
         {
             Countries = new []
             {
@@ -24,8 +24,6 @@ namespace XamarinFormsExperiments
                 "Österreich",
                 "Schweiz"
             };
-
-            return Task.FromResult(0);
         }
 
         public async Task OpenCountry(string country)

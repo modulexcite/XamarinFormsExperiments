@@ -1,10 +1,11 @@
 ﻿using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace XamarinFormsExperiments
 {
-    public interface IViewModel
+    public interface IViewModel : INotifyPropertyChanged
     {
-        Task InitializeAsync(object parameter);
+        void Initialize(object parameter);
     }
 }
 

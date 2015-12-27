@@ -16,16 +16,9 @@ namespace XamarinFormsExperiments
         {
         }
 
-        public override Task InitializeAsync(object parameter)
+        public override void Initialize(object parameter)
         {
-            // Just to demonstrate data-binding is working.
-            Task.Run(async () =>
-            {
-                await Task.Delay(2000);
-                Country = parameter.ToString();
-            });
-
-            return Task.FromResult(0);
+            Country = parameter.ToString();
         }
     }
 }
