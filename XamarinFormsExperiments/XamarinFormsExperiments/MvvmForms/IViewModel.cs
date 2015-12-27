@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace XamarinFormsExperiments
 {

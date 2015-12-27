@@ -8,12 +8,16 @@ namespace XamarinFormsExperiments
     {
         public App()
         {
-            var list = new CountryListPage();
-            var viewModel = new CountryListViewModel(list.Navigation);
+            var viewModel = new CountryListViewModel();
             viewModel.Initialize(null);
+
+            var list = new CountryListPage();
             list.SetViewModel(viewModel);
 
             MainPage = new NavigationPage(list);
+
+            // Workaround
+            ViewModelBase.Presenter = new FormsPresenter(Current.MainPage.Navigation);
         }
 
         protected override void OnStart()

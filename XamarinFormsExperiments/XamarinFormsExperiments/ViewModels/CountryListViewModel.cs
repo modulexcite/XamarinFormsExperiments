@@ -1,5 +1,4 @@
-﻿using Xamarin.Forms;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace XamarinFormsExperiments
 {
@@ -10,10 +9,6 @@ namespace XamarinFormsExperiments
         { 
             get { return _countries; }
             set { _countries = value; NotifyPropertyChanged(); }
-        }
-
-        public CountryListViewModel(INavigation navigation) : base(navigation)
-        {
         }
 
         public override void Initialize(object parameter)

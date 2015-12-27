@@ -2,7 +2,7 @@
 
 namespace XamarinFormsExperiments
 {
-    public class PageBase : ContentPage, IView
+    public abstract class PageBase : ContentPage, IView
     {
         public void SetViewModel(IViewModel viewModel)
         {
