@@ -8,7 +8,7 @@ namespace XamarinFormsExperiments
     {
         public App()
         {
-            MainPage = new HomePage();
+            MainPage = new NavigationPage(new CountryListPage());
         }
 
         protected override void OnStart()
