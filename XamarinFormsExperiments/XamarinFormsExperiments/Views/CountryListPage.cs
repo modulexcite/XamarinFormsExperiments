@@ -14,7 +14,7 @@ namespace XamarinFormsExperiments
             countryList.ItemSelected += async (sender, e) => 
             {
                 var viewModel = (CountryListViewModel)BindingContext;
-                await viewModel.OpenCountry(e.SelectedItem.ToString());
+                await viewModel.OpenCountryAsync(e.SelectedItem.ToString());
             };
 
             Content = new StackLayout

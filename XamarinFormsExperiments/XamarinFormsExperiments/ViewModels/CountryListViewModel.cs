@@ -21,7 +21,7 @@ namespace XamarinFormsExperiments
             };
         }
 
-        public async Task OpenCountry(string country)
+        public async Task OpenCountryAsync(string country)
         {
             await ShowViewModelAsync<CountryDetailViewModel>(country);
         }

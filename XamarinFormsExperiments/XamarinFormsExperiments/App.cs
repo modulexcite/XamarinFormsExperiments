@@ -8,6 +8,7 @@ namespace XamarinFormsExperiments
     {
         public App()
         {
+            // All that manual initialization stuff should be done automatically
             var viewModel = new CountryListViewModel();
             viewModel.Initialize(null);
 
