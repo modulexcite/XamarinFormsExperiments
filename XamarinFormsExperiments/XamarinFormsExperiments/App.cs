@@ -3,7 +3,9 @@
 using Xamarin.Forms;
 using XamarinFormsExperiments.ViewModels;
 using XamarinFormsExperiments.Pages;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XamarinFormsExperiments
 {
     public class App : Application
