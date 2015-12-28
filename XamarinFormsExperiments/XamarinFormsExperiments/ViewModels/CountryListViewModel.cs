@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace XamarinFormsExperiments
+namespace XamarinFormsExperiments.ViewModels
 {
     public class CountryListViewModel : ViewModelBase
     {

@@ -1,4 +1,4 @@
-﻿namespace XamarinFormsExperiments
+﻿namespace XamarinFormsExperiments.ViewModels
 {
     public class CountryDetailViewModel : ViewModelBase
     {

@@ -1,6 +1,8 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using XamarinFormsExperiments.ViewModels;
+using XamarinFormsExperiments.Pages;
 
 namespace XamarinFormsExperiments
 {

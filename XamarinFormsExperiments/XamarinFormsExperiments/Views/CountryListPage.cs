@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
+using XamarinFormsExperiments.ViewModels;
 
-namespace XamarinFormsExperiments
+namespace XamarinFormsExperiments.Pages
 {
     public class CountryListPage : PageBase<CountryListViewModel>
     {

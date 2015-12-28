@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System;
 
-namespace XamarinFormsExperiments
+namespace XamarinFormsExperiments.Pages
 {
     public abstract class PageBase<TViewModel> : ContentPage, IView
         where TViewModel : IViewModel

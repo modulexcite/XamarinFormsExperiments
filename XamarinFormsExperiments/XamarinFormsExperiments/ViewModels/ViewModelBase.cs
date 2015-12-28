@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace XamarinFormsExperiments
+namespace XamarinFormsExperiments.ViewModels
 {
     public abstract class ViewModelBase : IViewModel
     {
