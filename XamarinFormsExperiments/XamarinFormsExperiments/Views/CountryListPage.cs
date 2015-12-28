@@ -2,20 +2,17 @@
 
 namespace XamarinFormsExperiments
 {
-    public class CountryListPage : PageBase
+    public class CountryListPage : PageBase<CountryListViewModel>
     {
         public CountryListPage()
         {
             Title = "Länder";
 
             var countryList = new ListView();
-            countryList.SetBinding<CountryListViewModel>(ListView.ItemsSourceProperty, x => x.Countries);
+            BindToViewModel(countryList, ListView.ItemsSourceProperty, x => x.Countries);
 
             countryList.ItemSelected += async (sender, e) => 
-            {
-                var viewModel = (CountryListViewModel)BindingContext;
-                await viewModel.OpenCountryAsync(e.SelectedItem.ToString());
-            };
+                await ViewModel.OpenCountryAsync(e.SelectedItem.ToString());
 
             Content = new StackLayout
             { 

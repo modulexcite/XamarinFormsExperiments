@@ -2,14 +2,14 @@
 
 namespace XamarinFormsExperiments
 {
-    public class CountryDetailPage : PageBase
+    public class CountryDetailPage : PageBase<CountryDetailViewModel>
     {
         public CountryDetailPage()
         {
-            this.SetBinding<CountryDetailViewModel>(Page.TitleProperty, x => x.Country);
+            BindToViewModel(this, Page.TitleProperty, x => x.Country);
 
             var label = new Label();
-            label.SetBinding<CountryDetailViewModel>(Label.TextProperty, x => x.Country);
+            BindToViewModel(label, Label.TextProperty, x => x.Country);
 
             Content = new StackLayout
             { 
